@@ -81,6 +81,8 @@ objects:
           value: "${MAVEN_MIRROR_URL}"
         - name: LIBERTY_RUNNABLE_JAR
           value: cache-cute-name-openliberty.jar
+        - name: ARTIFACT_DIR
+          value: "${SOURCE_REPOSITORY_DIR}/target"          
       type: Source
     triggers:
     - github:

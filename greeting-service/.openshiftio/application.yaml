@@ -13,7 +13,7 @@ parameters:
 - name: SOURCE_REPOSITORY_URL
   description: The source URL for the application
   displayName: Source URL
-  value: https://github.com/openliberty-examples/cache-redhat.git
+  value: https://github.com/PurpleLiberty/example-cache.git
   required: true
 - name: SOURCE_REPOSITORY_REF
   description: The branch name for the application
@@ -35,6 +35,7 @@ parameters:
   description: URL of a Maven repository that will be used during build phase as a global Maven mirror
   displayName: Maven Mirror URL
   required: false
+
 objects:
 - apiVersion: v1
   kind: ImageStream
@@ -50,7 +51,7 @@ objects:
     - name: latest
       from:
         kind: DockerImage
-        name: registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift
+        name: docker.io/openliberty/open-liberty-s2i:19.0.0.9
 - apiVersion: v1
   kind: BuildConfig
   metadata:
@@ -80,7 +81,9 @@ objects:
         - name: MAVEN_MIRROR_URL
           value: "${MAVEN_MIRROR_URL}"
         - name: LIBERTY_RUNNABLE_JAR
-          value: rest-http-openliberty.jar
+          value: greeting-service-openliberty.jar
+        - name: ARTIFACT_DIR
+          value: "${SOURCE_REPOSITORY_DIR}/target"          
       type: Source
     triggers:
     - github:
