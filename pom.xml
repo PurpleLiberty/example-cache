@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!--
   ~
-  ~  Copyright 2016-2017 Red Hat, Inc, IBM, and individual contributors.
+  ~  Copyright 2016-2020 Red Hat, Inc, IBM, and individual contributors.
   ~
   ~  Licensed under the Apache License, Version 2.0 (the "License");
   ~  you may not use this file except in compliance with the License.
@@ -43,7 +43,7 @@
     <version.arquillian-junit>1.4.1.Final</version.arquillian-junit>
     <version.fabric8-maven-plugin>4.3.0</version.fabric8-maven-plugin>
     <version.infinispan>9.4.6.Final</version.infinispan>
-    <version.junit>4.12</version.junit>
+    <version.junit>4.13.1</version.junit>
     <version.maven-resources-plugin>3.1.0</version.maven-resources-plugin>
     <version.maven-surefire-plugin>2.22.2</version.maven-surefire-plugin>
     <version.maven-war-plugin>3.2.3</version.maven-war-plugin>

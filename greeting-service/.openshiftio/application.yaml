@@ -81,7 +81,7 @@ objects:
         - name: MAVEN_MIRROR_URL
           value: "${MAVEN_MIRROR_URL}"
         - name: LIBERTY_RUNNABLE_JAR
-          value: greeting-service-openliberty.jar
+          value: cache-greeting-service-openliberty.jar
         - name: ARTIFACT_DIR
           value: "${SOURCE_REPOSITORY_DIR}/target"          
       type: Source

@@ -5,15 +5,15 @@
       <feature>jsonp-1.1</feature>
       <feature>jsonb-1.0</feature>
       <feature>cdi-2.0</feature>
-      <feature>mpConfig-1.3</feature>  
-      <feature>mpHealth-1.0</feature>  
+      <feature>mpConfig-1.4</feature>
+      <feature>mpHealth-2.2</feature>
   </featureManager>
 
 
  <httpEndpoint httpPort="${default.http.port}" httpsPort="${default.https.port}"
                 id="defaultHttpEndpoint" host="*" />
 
-  <webApplication name="CuteNameService" location="openliberty-cache-greeting.war" contextRoot="${app.context.root}"/>
+  <webApplication name="CuteNameService" location="${project.artifactId}.war" contextRoot="${app.context.root}"/>
 
   <httpDispatcher enableWelcomePage="false"/>
 
